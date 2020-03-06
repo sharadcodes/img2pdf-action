@@ -1,0 +1,26 @@
+# action.yml
+name: 'Image 2 PDF Action'
+description: 'Converts the images in the given folder to pdf and saves them to the specified folder'
+branding:
+  icon: 'image'  
+  color: 'green'
+inputs:
+  image-folder:
+    description: 'Folder in which original images are stored'
+    required: true
+    default: 'images'
+  page-size:
+    description: 'Page size for pdfs'
+    required: true
+    default: 'A4'
+  output-folder:
+    description: 'Folder in which pdfs are stored'
+    required: true
+    default: 'output-pdfs'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.image-folder }}
+    - ${{ inputs.page-size }}
+    - ${{ inputs.output-folder }}
