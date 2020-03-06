@@ -1,6 +1,6 @@
 # action.yml
 name: 'Image 2 PDF Action'
-description: 'Converts the images in the given folder to pdf and saves them to the specified folder'
+description: 'Converts the images in a given folder to pdfs according to the specified page size and saves the output pdfs to the specified folder.'
 branding:
   icon: 'image'  
   color: 'green'
